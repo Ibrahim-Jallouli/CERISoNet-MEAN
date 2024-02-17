@@ -1,0 +1,39 @@
+<mat-toolbar >
+    <img src="assets/Logo1.png" alt="logo" class="logo">
+    <span class="spacer"></span>
+    <div *ngIf="isAuthenticated== false" >
+        BienVenue dans votre réseau social CERISoNet !!
+    </div>
+    <div *ngIf="isAuthenticated" class="c1">
+      <h1 style="font-size: 40px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-style: italic; ">CERISoNet</h1>
+    </div>
+    <span class="spacer"></span>
+    
+
+    <div  [matMenuTriggerFor]="notificationMenu">
+      <mat-icon style="color: #D3D3D3;" (click)="showNotifications()" #notificationMenuTrigger>notifications</mat-icon>
+    </div>
+    
+    <mat-menu #notificationMenu="matMenu">
+      <ng-container *ngFor="let notification of notifications">
+        <button mat-menu-item>{{ notification }}</button>
+      </ng-container>
+    </mat-menu>
+
+
+    <div class="avatar-container" *ngIf="isAuthenticated">
+      <div [matMenuTriggerFor]="avatarMenu"
+      >
+        <img
+          [src]="userAvatar"
+          alt="User Avatar"
+          class="avatar"
+          *ngIf="isAuthenticated"
+        />
+    </div>
+      <mat-menu #avatarMenu="matMenu">
+        <div style="text-align: center; font-weight: bold;">{{ username }}</div>
+        <button mat-menu-item (click)="logout()">Logout</button>
+      </mat-menu>
+    </div>
+</mat-toolbar>

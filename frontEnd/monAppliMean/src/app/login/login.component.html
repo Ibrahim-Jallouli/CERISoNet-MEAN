@@ -1,0 +1,48 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <title> login </title>
+</head>
+
+<body style=" background-color:#F3F6F8;">
+    <div class="col-md-12 row">
+        <img src="../../assets/Login.png" />
+        <div id="bottom" class="card card-container">
+            <div class="bottom">
+                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                    <h2 class="title2">Se connecter</h2>
+                    <div class="form-group">
+                        <div class="input-field">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+
+                            <input type="text" id="username" formControlName="username"
+                                placeholder="Entrez votre nom d'utilisateur" class="form-control">
+                        </div>
+                        <div class="alert alert-danger" role="alert" *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
+                            Nom utilisateur est obligatoire!
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-top: 15px;">
+                        <div class="input-field">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                            <input type="password" id="password" formControlName="password" class="form-control"
+                                placeholder="Mot de Passe">
+                        </div>
+                        <div class="alert alert-danger" role="alert" *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">Mot de passe est obligatoire!</div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Connexion
+                        </button>
+                    </div>
+                </form>
+                <div class="text-center">
+                    <p>Nouveau sur CERISoNet ?
+                        <a href="https://pedago.univ-avignon.fr/~fredouil/register_jeu.php"
+                            class="sign-in-button">Inscription</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>

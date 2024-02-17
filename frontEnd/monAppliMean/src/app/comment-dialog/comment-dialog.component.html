@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>Comments</h2>
+<mat-dialog-content>
+  <div *ngFor="let comment of data.comments">
+    <mat-card>
+      <mat-card-header>
+            <mat-card-title>{{ comment.identifiant }} {{ comment.date }} {{ comment.hour }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ comment.text }} </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</mat-dialog-content>
+
+<mat-form-field class="comment-input">
+  <textarea matInput placeholder="Add your comment" [(ngModel)]="newCommentText"></textarea>
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="submitComment()">Submit Comment</button>
+
+<mat-dialog-actions>
+  <button mat-button (click)="onClosed()">Close</button>
+</mat-dialog-actions>
+

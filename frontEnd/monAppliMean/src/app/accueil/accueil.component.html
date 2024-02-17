@@ -1,0 +1,70 @@
+<div class="accueil">
+    <div style="display: flex;height: 100%;">
+        <!-- Sidebar -->
+        <div class="sidebar col-md-3 d-none d-md-block">
+            <div (click)="navigateTo('home')" class="redirection" >
+              <mat-icon class="icon" style="color: rgb(0, 123, 255); background-color:rgb(206, 221, 227)">home</mat-icon> <h5> Home</h5>
+            </div>
+            <div (click)="navigateTo('friends')" class="redirection" >
+              <mat-icon class="icon" style="color: rgb(0, 134, 0); background-color:rgb(194, 221, 179)" >people</mat-icon> <h5>Friends</h5>
+            </div>
+            <div (click)="navigateTo('my-posts')" class="redirection" >
+              <mat-icon class="icon" style="color: rgb(215, 148, 80); background-color:rgb(230, 212, 178)">description</mat-icon> <h5>My Posts</h5>
+            </div>
+            <div class="powred-by">
+                Powered by <a href="https://ceri.univ-avignon.fr/" target="_blank">CERI</a>
+            </div>
+        </div>
+      
+        <!-- Main Content -->
+        <div class="main-content col-md-6 col-12">
+          <div style="background-color: #F3F6F8;">      
+            <ng-container *ngIf="selectedSection === 'home'">
+              <!--call for the container of POSTS -->
+                <app-posts></app-posts> 
+
+            </ng-container>
+
+      
+            <ng-container *ngIf="selectedSection === 'friends'">
+              <!-- Content for FRIENDS section -->
+              <p>Content for FRIENDS section</p>
+            </ng-container>
+      
+            <ng-container *ngIf="selectedSection === 'my-posts'">
+              <!-- Content for MY POSTS section -->
+              <p>My Posts:</p>
+              <ul>
+                <li *ngFor="let post of userPosts">
+                  {{ post.title }} - {{ post.body }}
+                </li>
+              </ul>
+            </ng-container>
+          </div>
+        </div>
+
+
+        <div class="right-sidebar col-md-3 d-none d-md-block">
+          <h4 style="margin-bottom: 20px;">Online Users</h4>
+          <div *ngFor="let user of users">
+            <div style="margin-bottom: 5%;" *ngIf="user.statut_connexion === 1">
+            <img   class="avatar" [src]="user.avatar"/>
+            {{ user.identifiant }}
+            </div>
+          </div>
+          <h4 style="margin-bottom: 20px; margin-top: 20px;" >Offline Users</h4>
+          <div *ngFor="let user of users">
+            <div style="margin-bottom: 5%;" *ngIf="user.statut_connexion === 0">
+            <img class="avatar" [src]="user.avatar" />
+            {{ user.identifiant }}
+          </div>
+          </div>
+        </div>
+   
+        
+
+</div>
+
+
+
+  

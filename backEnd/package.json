@@ -1,0 +1,22 @@
+{
+  "name": "public_html_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "monserver.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/cli": "^16.2.5",
+    "body-parser": "^1.20.2",
+    "connect-mongodb-session": "^3.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongodb": "^6.1.0",
+    "pg": "^8.11.3",
+    "socket.io": "^4.7.2"
+  }
+}

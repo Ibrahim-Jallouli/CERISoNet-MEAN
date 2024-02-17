@@ -1,0 +1,122 @@
+
+
+.card-container.card {
+    max-width: 500px !important;
+    padding: 60px 50px 10px 50px;
+    float: left;
+    width: 50%;
+    border-radius: 20px;
+    border: none;
+    }
+    
+    .card {
+      background-color: #fffbfb;
+      flex-direction: none;
+    }
+    
+    .row img{
+      border-radius: 10px;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0 ;
+      height: 100%;
+      width: 50%;
+    }
+    
+    
+    .row{
+      position: absolute;
+      padding: 0%;
+      height: 80%;
+      width: 60%;
+      margin: 2% 20%;
+        display: flex;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px ;
+        border-radius: 20px;
+        -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        background-color: #fffbfb;
+        border: 1px solid rgba(0,0,0,.125);
+        --bs-gutter-x:0;
+      }
+    
+      
+    .mat-body, .mat-body-1, .mat-typography h2{
+      text-align: center ;
+      font-weight: 700;
+      font-size: 35px;
+      padding: 25px;
+    }
+    .form-control{
+      width: 90%;
+      height: 45px;
+      outline: none;
+      background: none;
+      justify-self: center;
+    }
+    .bottom .form-control{
+    border: none;
+    }
+    .input-field{
+      padding: 0px 30px;
+      width: 90%;
+      display: flex;
+      background-color: #f0f0f0;
+      border-radius: 50px;
+      position: relative;
+      grid-template-columns: 35% 65%;
+    }
+    .input-field i{
+      color: #8d8d8d;
+      text-align: center;
+      line-height: 45px;
+      font-size: 22px;
+    }
+    .input-field input:placeholder-shown{
+      font-weight: 400;
+      color: #707070;
+    
+    }
+    .btn{
+      width: 50%;
+      height: inherit;
+      border-radius: 50px;
+      font-size:20px;
+      padding: 15px;
+      font-weight: 500;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      margin-left: 23%;
+      background-color: #05a7a7;
+      border: #05a7a7;
+    
+    }
+    
+    .title2 {
+      text-align: center;
+      font-weight: 700;
+      font-size: 35px;
+      padding: 25px;
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 767px) {
+      .title2 {
+          font-size: 14px;
+          padding: 15px;
+      }
+  }
+    .signup{
+      text-decoration: none;
+      color:#05a7a7;
+      text-decoration: underline;
+    }
+    
+    .recuperate{
+      text-decoration: none;
+      color:#05a7a7;
+      text-decoration: underline;
+    }
+    
+    

@@ -1,0 +1,24 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .app-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+  .router-container {
+    flex: 1;
+    overflow-y: auto; 
+    margin-top: 60px; 
+    background-color: #F3F6F8; 
+  }
